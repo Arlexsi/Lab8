@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  color: #4a1030;
+  background: #ffc2d9;
+}
+
+.game {
+  width: 100%;
+  max-width: 700px;
+  padding: 25px;
+  text-align: center;
+  background: #ffe3ee;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(194, 24, 91, 0.25);
+}
+
+.subtitle {
+  margin: 5px 0 20px;
+  opacity: 0.7;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.card {
+  flex: 1;
+  padding: 15px;
+  background: #ffb3d1;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+/* підсвітка  */
+.card.win {
+  border-color: #e91e63;
+  box-shadow: 0 0 20px #f06292;
+  transform: scale(1.05);
+}
+
+.card.lose {
+  border-color: #f8bbd0;
+  opacity: 0.6;
+}
+
+.vs {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d81b60;
+}
+
+.number {
+  margin: 15px 0;
+  font-size: 65px;
+  font-weight: bold;
+  color: #880e4f;
+}
+
+/*  вилітає */
+.pop {
+  animation: pop 0.45s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.3) rotate(-20deg); opacity: 0; }
+  70%  { transform: scale(1.25) rotate(5deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.message {
+  min-height: 30px;
+  margin: 25px 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*  повідомлення */
+.good { color: #c2185b; }
+.bad  { color: #8d6e7a; }
+.draw { color: #e91e63; }
+
+button {
+  padding: 12px 24px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  background: #e91e63;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #f06292;
+  transform: translateY(-3px);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* адаптивність */
+@media (max-width: 520px) {
+  .players {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .number {
+    font-size: 45px;
+    margin: 8px 0;
+  }
+}

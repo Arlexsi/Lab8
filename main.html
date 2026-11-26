@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Більше число</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game">
+    <h1>Більше число </h1>
+    <p class="subtitle">Хто першим набере 3 перемоги?</p>
+
+    <div class="players">
+      <div class="card" id="playerCard">
+        <h2 id="playerName">Гравець</h2>
+        <div class="number" id="playerNumber">?</div>
+        <p>Бали: <b id="playerScore">0</b></p>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="card" id="pcCard">
+        <h2>Комп'ютер </h2>
+        <div class="number" id="pcNumber">?</div>
+        <p>Бали: <b id="pcScore">0</b></p>
+      </div>
+    </div>
+
+    <p class="message" id="message">Натисни кнопку, щоб почати</p>
+
+    <button id="rollBtn">Кинути числа</button>
+    <button id="restartBtn">Заново</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
