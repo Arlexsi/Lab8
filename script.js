@@ -35,7 +35,7 @@ function getRandom() {
 function showNumber(element, number) {
   element.textContent = number;
   element.classList.remove("pop");
-  void element.offsetWidth; // щоб анімація спрацьовувала кожен раз
+  void element.offsetWidth; 
   element.classList.add("pop");
 }
 
